@@ -1,0 +1,19 @@
+{
+  "name": "discord.js-components-v2",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "start": "bun src/index.ts",
+    "dev": "bun --watch src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "discord.js": "^14.19.1"
+  }
+}
