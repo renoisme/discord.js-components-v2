@@ -1,4 +1,4 @@
-import { AttachmentBuilder, ButtonBuilder, ButtonStyle, Client, ContainerBuilder, Events, FileBuilder, GatewayIntentBits, MediaGalleryBuilder, MediaGalleryItemBuilder, MessageFlags, SectionBuilder, SeparatorBuilder, SeparatorSpacingSize, TextDisplayBuilder, } from 'discord.js';
+import { AttachmentBuilder, ButtonBuilder, ButtonStyle, Client, ContainerBuilder, Events, FileBuilder, GatewayIntentBits, MediaGalleryBuilder, MediaGalleryItemBuilder, Message, MessageFlags, SectionBuilder, SeparatorBuilder, SeparatorSpacingSize, TextDisplayBuilder, } from 'discord.js';
 
 const client = new Client({
    intents: [
@@ -8,11 +8,11 @@ const client = new Client({
    ]
 });
 
-client.once(Events.ClientReady, (client) => {
-   console.log(`${client.user.tag}`);
+client.once(Events.ClientReady, (client: Client) => {
+   console.log(`${client.user!.tag}`);
 });
 
-client.on(Events.MessageCreate, (message) => {
+client.on(Events.MessageCreate, (message: Message) => {
    if (message.content === '!message') {
 
       const container = new ContainerBuilder();
